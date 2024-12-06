@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes moveRight {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  .animate-move-right {
+    animation: moveRight 0.9s ease-in-out forwards;
+  }
+  
+
+  /* Rainbow text animation */
+@keyframes rainbow {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
+  }
+  
+  /* Rainbow border animation */
+  @keyframes border-rainbow {
+    0% { border-color: red; }
+    16% { border-color: orange; }
+    33% { border-color: yellow; }
+    50% { border-color: green; }
+    66% { border-color: blue; }
+    83% { border-color: indigo; }
+    100% { border-color: violet; }
+  }
+  
+  /* Apply rainbow animation on hover */
+  .hover\:text-rainbow:hover {  
+    animation: rainbow 2s linear infinite;
+  }
+  
+  .hover\:border-animation:hover {
+    animation: border-rainbow 1s linear infinite;
+  }
+
+  
+  @keyframes rainbow-text {
+    0% {
+      color: red;
+    }
+    20% {
+      color: orange;
+    }
+    40% {
+      color: yellow;
+    }
+    60% {
+      color: green;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  .rainbow-text {
+    animation: rainbow-text 2s linear infinite;
+  }
+  
+  /* Add this to your global CSS or the Landing component CSS */
+
+.page-transition {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  /* Add this for fade-out effect */
+.page-exit {
+    animation: fadeOut 1s ease-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
